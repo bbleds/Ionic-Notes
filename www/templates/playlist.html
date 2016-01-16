@@ -1,0 +1,29 @@
+<ion-view view-title="Viewing: {{ single.title}}" ng-controller="SingleNoteCtrl as single">
+  <ion-content>
+
+
+        <div ng-if="single.EditMode === false">
+          <h1>{{single.title}}</h1>
+          <p>{{single.body}}</p>
+          <button class="button button-balanced" ng-click="single.editNote()"> Edit </button>
+          <button class="button" ng-click="single.delete()">Delete</button>
+       </div>
+       <div ng-if="single.EditMode === true">
+			    <form name="form" novalidate>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input ng-model="single.editNoteTitle" type="text" placeholder="Title" name="title" required>
+          </label>
+          <label class="item item-input">
+            <textarea id="text" ng-model="single.editNoteBody" type="text" placeholder="Notes Here!" rows="20" name="text" required></textarea>
+          </label>
+     <span ng-show="form.title.$error.required && form.title.$touched">Title is required</span>
+     <span ng-show="form.text.$error.required && form.text.$touched">Note cannot be blank</span>
+        </div>
+        <button class="button button-balanced" type="button" ng-disabled="form.$invalid" ng-click="single.saveNote()">Save Note</button>
+    <!--     <button class="button button-calm" ng-click="addnote.speechRec(addnote.noteBody)">Notes By Speech</button> -->
+   </form>
+		   </div>
+
+  </ion-content>
+</ion-view>

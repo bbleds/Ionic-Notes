@@ -1,0 +1,18 @@
+<ion-view view-title="Create A Note" ng-controller="AddNoteCtrl as addnote">
+ <ion-content>
+   <form name="form" novalidate>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input ng-model="addnote.noteTitle" type="text" placeholder="Title" name="title" required>
+          </label>
+          <label class="item item-input">
+            <textarea id="text" ng-model="addnote.noteBody" type="text" placeholder="Notes Here!" rows="20" name="text" required></textarea>
+          </label>
+     <span ng-show="form.title.$error.required && form.title.$touched">Title is required</span>
+     <span ng-show="form.text.$error.required && form.text.$touched">Note cannot be blank</span>
+        </div>
+        <button class="button button-balanced" type="button" ng-disabled="form.$invalid" ng-click="addnote.createNote(addnote.noteTitle,addnote.noteBody)">Save Note</button>
+    <!--     <button class="button button-calm" ng-click="addnote.speechRec(addnote.noteBody)">Notes By Speech</button> -->
+   </form>
+ </ion-content>
+</ion-view>

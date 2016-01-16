@@ -1,0 +1,10 @@
+<ion-view view-title="Notes" ng-controller="NotesCtrl as notes" ng-init="doSomething()">
+
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-button-right" ng-repeat="notes in notes.noteHistory" href="#/app/playlists/{{notes.title}}">
+        {{notes.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
