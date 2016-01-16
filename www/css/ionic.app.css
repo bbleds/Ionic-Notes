@@ -9745,3 +9745,12 @@ a.button {
 
 #singleNote .bodyOfNote {
   padding: 20px; }
+
+.fullCenter {
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 1rem; }
+  .fullCenter:first-of-type {
+    margin-top: 10px; }

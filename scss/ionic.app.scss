@@ -43,3 +43,16 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 }
 
+.fullCenter{
+	width: 100%;
+	text-align: center;
+	display: block;
+	padding: 10px;
+	font-size: 1rem;
+
+	&:first-of-type{
+		margin-top: 10px;
+	}
+}
+
+
