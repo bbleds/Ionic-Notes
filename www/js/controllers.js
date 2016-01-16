@@ -73,9 +73,9 @@ angular.module('starter.controllers', [])
   $interval(function(){
     if(localStorage.BAMSnoteHistory !== undefined){
     self.noteHistory = $localStore.getLocalStorage();
+
     }
   }, 500);
-  console.log("LOCAL STORAGE IS ", self.noteHistory);
   self.notes;
 }])
 .controller('SingleNoteCtrl', ['localStore','$stateParams', '$state',

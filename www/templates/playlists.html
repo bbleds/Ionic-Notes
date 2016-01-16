@@ -2,9 +2,14 @@
 
   <ion-content>
     <ion-list>
-      <ion-item class="item-button-right" ng-repeat="notes in notes.noteHistory" href="#/app/playlists/{{notes.title}}">
-        {{notes.title}}
-      </ion-item>
+    	<div ng-if="notes.noteHistory">
+	      <ion-item class="item-button-right" ng-repeat="notes in notes.noteHistory" href="#/app/playlists/{{notes.title}}">
+	        {{notes.title}}
+	      </ion-item>
+      </div>
+      <div ng-if="notes.noteHistory === undefined">
+      	<p class="noNotes">You haven't created any notes yet!</p>
+      </div>
     </ion-list>
   </ion-content>
 </ion-view>
