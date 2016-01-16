@@ -21,3 +21,25 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.indivCenter{
+	width: 275px;
+	position: relative;
+	margin-left: -137.5px;
+	left: 50%;
+	display: block;
+	margin-bottom: 15px;
+
+}
+
+#singleNote{
+
+	h1{
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.bodyOfNote{
+	padding: 20px;
+	}
+}
+

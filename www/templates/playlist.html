@@ -1,12 +1,12 @@
 <ion-view view-title="Viewing: {{ single.title}}" ng-controller="SingleNoteCtrl as single">
-  <ion-content>
+  <ion-content id="singleNote">
 
 
         <div ng-if="single.EditMode === false">
           <h1>{{single.title}}</h1>
-          <p>{{single.body}}</p>
-          <button class="button button-balanced" ng-click="single.editNote()"> Edit </button>
-          <button class="button" ng-click="single.delete()">Delete</button>
+          <p class="bodyOfNote">{{single.body}}</p>
+          <button class="button button-balanced indivCenter" ng-click="single.editNote()"> Edit </button>
+          <button class="button button-dark indivCenter" ng-click="single.delete()">Delete</button>
        </div>
        <div ng-if="single.EditMode === true">
 			    <form name="form" novalidate>
