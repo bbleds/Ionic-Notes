@@ -9730,3 +9730,18 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.indivCenter {
+  width: 275px;
+  position: relative;
+  margin-left: -137.5px;
+  left: 50%;
+  display: block;
+  margin-bottom: 15px; }
+
+#singleNote h1 {
+  text-align: center;
+  margin-top: 20px; }
+
+#singleNote .bodyOfNote {
+  padding: 20px; }
