@@ -9751,7 +9751,8 @@ a.button {
   text-align: center;
   display: block;
   padding: 10px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: gray; }
   .fullCenter:first-of-type {
     margin-top: 10px; }
 
