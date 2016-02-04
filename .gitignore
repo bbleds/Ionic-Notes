@@ -5,4 +5,3 @@ plugins/
 config.xml
 .node-version
 .editorconfig
-www/lib
