@@ -3,7 +3,7 @@
   <ion-content>
     <ion-list>
     	<div ng-if="notes.noteHistory">
-	      <ion-item class="item-button-right" ng-repeat="notes in notes.noteHistory" href="#/app/playlists/{{notes.title}}">
+	      <ion-item class="item-button-right" ng-repeat="notes in notes.noteHistory" href="#/app/notes/{{notes.title}}">
 	        {{notes.title}}
 	      </ion-item>
       </div>

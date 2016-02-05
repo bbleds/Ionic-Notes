@@ -104,7 +104,7 @@ angular.module('starter.controllers', [])
     console.log("local[self.title]", local[self.title]);
     delete local[self.title];
     localStorage.BAMSnoteHistory = JSON.stringify(local);
-    $state.go('app.playlists');
+    $state.go('app.notes');
   }
     //FOR EDIT MODE
       //have edit button in top corner
@@ -133,7 +133,7 @@ angular.module('starter.controllers', [])
     console.log("body", body);
     //save to local storage
     $localStore.setLocalStorage(title,body)
-    $state.go('app.playlists')
+    $state.go('app.notes')
     self.noteTitle = '';
     self.noteBody = '';
   }
@@ -145,7 +145,7 @@ angular.module('starter.controllers', [])
     console.log(localStore.getLocalStorage());
     var titlePassed = localStore.getTitle();
     if (titlePassed === undefined) {
-     $state.go('app.playlists')
+     $state.go('app.notes')
     } else {
       self.noteBody = localStore.getLocalStorage()[titlePassed].body;
       self.noteTitle = titlePassed;
